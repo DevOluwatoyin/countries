@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,800;1,600&display=swap");
+
+html {
+  --dark-blue: hsl(209, 23%, 22%);
+  --v-dark-blue: hsl(207, 26%, 17%);
+  --dark-blue-text: hsl(200, 15%, 8%);
+  --dark-gray: hsl(0, 0%, 52%);
+  --v-light-gray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 14px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--dark-blue);
+  color: white;
+  padding: 2.3rem 1rem;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.755);
+}
+
+.container {
+  background-color: var(--v-dark-blue);
+  padding: 2rem 1rem;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  background-color: var(--dark-blue);
+  color: var(--white);
+  padding: 1rem 1rem 1rem 2rem;
+  border-radius: 5px;
+
+  & input {
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+  }
+
+  & input::placeholder {
+    color: white;
+  }
+}
+
+.countries {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 2.5rem;
+}
+
+.country {
+  border-radius: 0.5rem;
+  background-color: var(--dark-blue);
+  overflow: hidden;
+  width: 250px;
+  color: white;
+
+  & h3 {
+    margin: 1rem 0;
+    padding: 0 1.5rem;
+  }
+
+  & .desc {
+    padding: 0 1.5rem 2rem;
+
+    & span{
+      color: var(--v-light-gray);
+    }
+  }
+}
