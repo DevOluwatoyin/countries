@@ -46,11 +46,45 @@ header {
     background-color: transparent;
     border: 0;
     outline: none;
+    color: white;
   }
 
   & input::placeholder {
     color: white;
   }
+}
+
+.dropdown {
+  background-color: var(--dark-blue);
+  color: var(--v-light-gray);
+  margin-top: 2rem;
+  width: 250px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.dropdown > p {
+  padding: 1.2rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown .contents {
+  display: none;
+  background-color: var(--dark-blue);
+  position: absolute;
+  width: 250px;
+  margin-top: 10px;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  & p {
+    padding: 8px;
+  }
+}
+
+.dropdown:hover .contents {
+  display: block;
 }
 
 .countries {
@@ -77,7 +111,7 @@ header {
   & .desc {
     padding: 0 1.5rem 2rem;
 
-    & span{
+    & span {
       color: var(--v-light-gray);
     }
   }
